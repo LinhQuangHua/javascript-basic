@@ -1,3 +1,1 @@
-var fullName = "Pikachu";
-
-console.log(fullName);
+confirm("Are you over 18 years old?")
