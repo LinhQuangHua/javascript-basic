@@ -1,1 +1,3 @@
-prompt("How old are you?")
+setTimeout(function () {
+    alert("Hello world!");
+}, 2000);
