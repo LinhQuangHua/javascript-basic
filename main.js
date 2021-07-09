@@ -1,3 +1,3 @@
-var fullName = 'Hua Linh Quang', age = 20;
+var fullName = "Pikachu";
 
-alert("Name: " + fullName + ", Age: " + age);
+console.log(fullName);
