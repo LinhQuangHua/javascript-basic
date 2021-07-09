@@ -1,10 +1,49 @@
-// String operator
+// Compare operator
 
-var firstName = "Wang";
-var lastName = "Hua";
+var a = 1;
+var b = 2;
 
-console.log(firstName + lastName);
-console.log(firstName + " " + lastName);
+if (a == b) {
+    console.log(true);
+}
+else {
+    console.log(false);
+}
+
+if (a > b) {
+    console.log(true);
+}
+else {
+    console.log(false);
+}
+
+if (a < b) {
+    console.log(true);
+}
+else {
+    console.log(false);
+}
+
+if (a >= b) {
+    console.log(true);
+}
+else {
+    console.log(false);
+}
+
+if (a <= b) {
+    console.log(true);
+}
+else {
+    console.log(false);
+}
+
+if (a != b) {
+    console.log(true);
+}
+else {
+    console.log(false);
+}
 
 
 
