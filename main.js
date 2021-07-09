@@ -1,3 +1,3 @@
-setTimeout(function () {
-    alert("Hello world!");
-}, 2000);
+setInterval(function () {
+    console.log(Math.random());
+}, 1000);
