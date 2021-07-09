@@ -1,49 +1,23 @@
-// Compare operator
+// If - else
 
-var a = 1;
-var b = 2;
+/**  Have 6 values are false when converse to boolean 
+* 0
+* false
+* '' - "" 
+* undefined
+* NaN 
+* null
+*/
 
-if (a == b) {
+var fullName = "Pika";
+
+if (fullName) {
     console.log(true);
 }
 else {
     console.log(false);
 }
 
-if (a > b) {
-    console.log(true);
-}
-else {
-    console.log(false);
-}
-
-if (a < b) {
-    console.log(true);
-}
-else {
-    console.log(false);
-}
-
-if (a >= b) {
-    console.log(true);
-}
-else {
-    console.log(false);
-}
-
-if (a <= b) {
-    console.log(true);
-}
-else {
-    console.log(false);
-}
-
-if (a != b) {
-    console.log(true);
-}
-else {
-    console.log(false);
-}
 
 
 
