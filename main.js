@@ -1,24 +1,33 @@
-// If - else
+// Logical operator
 
-/**  Have 6 values are false when converse to boolean 
-* 0
-* false
-* '' - "" 
-* undefined
-* NaN 
-* null
+/**  
+ * And - &&
+ * Or - ||
+ * Not - !
 */
 
-var fullName = "Pika";
+var a = 1, b = 2, c = 3;
 
-if (fullName) {
+if (a > 0 && b > 0 && c > 0) {
     console.log(true);
 }
 else {
     console.log(false);
 }
 
+if (a > 0 || b < 0 || c < 0) {
+    console.log(true);
+}
+else {
+    console.log(false);
+}
 
+if (!(a > 0)) {
+    console.log(true);
+}
+else {
+    console.log(false);
+}
 
 
 
