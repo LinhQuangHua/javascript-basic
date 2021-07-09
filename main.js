@@ -1,15 +1,11 @@
-// Assignment operator
+// String operator
 
-var a = 1;
+var firstName = "Wang";
+var lastName = "Hua";
 
-a += 2; // a = a + 2
+console.log(firstName + lastName);
+console.log(firstName + " " + lastName);
 
-a -= 2; // a = a - 2
 
-a *= 2; // a = a * 2
-
-a /= 2; // a = a / 2
-
-a **= 2; // a = a ** 2 
 
 
