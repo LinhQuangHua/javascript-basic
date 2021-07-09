@@ -1,1 +1,1 @@
-confirm("Are you over 18 years old?")
+prompt("How old are you?")
