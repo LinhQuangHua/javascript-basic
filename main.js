@@ -1,33 +1,52 @@
-// Logical operator
+//1 - Primitive Data
 
-/**  
- * And - &&
- * Or - ||
- * Not - !
-*/
+// Number type
+var a = 1;
+var b = 1.5;
 
-var a = 1, b = 2, c = 3;
+console.log(typeof (a));
+// String type
+var name = "Pikachu";
+var nickName = "Linh 'Wang'";
 
-if (a > 0 && b > 0 && c > 0) {
-    console.log(true);
+// Boolean type
+var isOpen = true;
+
+// undefined type
+var age;
+
+// Null
+var isNull = null;
+console.log(typeof (isNull)); // typeof null is object
+// Symbol type
+var id = Symbol('id'); //unique
+var id2 = Symbol('id'); //unique
+
+console.log(id === id2); //false
+
+//2 - Complex Data
+
+// Array
+var myArray = [
+    'PHP',
+    'C#',
+    'Python',
+    'javascript'
+]
+
+console.log(myArray);
+
+// Function
+var myFunction = function () {
+    console.log("Helllo World");
 }
-else {
-    console.log(false);
-}
 
-if (a > 0 || b < 0 || c < 0) {
-    console.log(true);
+myFunction();
+// Object
+var myObject = {
+    name: 'Linh Wang',
+    age: 20,
+    location: 'HCMC',
 }
-else {
-    console.log(false);
-}
-
-if (!(a > 0)) {
-    console.log(true);
-}
-else {
-    console.log(false);
-}
-
-
+console.log(myObject);
 
