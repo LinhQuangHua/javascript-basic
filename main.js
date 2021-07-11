@@ -1,11 +1,16 @@
-// Compare operator - Part 02
+// String in Javascript
 
-var a = 1, b = 1, c = '1';
+// Create
+var myName = 'Wang Hua'; // ==> type is string 
+var fullName = new String('Wang Linh'); // type is object
 
-// ===
-console.log(a === b);
-console.log(a === c); // Compare value and data type
+// Backslash
+myName = 'My name is \'Wang Hua\'';
+console.log(myName);
 
-// !=== 
-console.log(a !== b);
-console.log(a !== c); // Compare value and data type
+// Length of string
+console.log(myName.length);
+
+// Template string ES6 
+var firstName = "Wang", lastName = "Hua";
+console.log(`My name is: ${firstName} ${lastName}`);
