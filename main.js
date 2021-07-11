@@ -1,41 +1,47 @@
-// Array in Javascript
+// Javascript array methods
 
 // Create
 var language = [
     'PHP',
     'Python',
     'C#',
-    'JavaScript',
-    undefined,
-    null,
-    function () {
-
-    },
-    {},
-    123
+    'JavaScript'
 ];
+
+// To string
+console.log(language.toString()); // returns array to strings
+
+// Join
+console.log(language.join(' ')); // same toString() with separator char
+
+// Pop
+console.log(language.pop()); // Delete a final element and return it
+
+// Push
+console.log(language.push('C++')); // return new length of array
 console.log(language);
 
-var language2 = new Array(
-    'PHP',
-    'Python',
-    'C#',
-    'JavaScript',
-    undefined,
-    null,
-    function () {
+// Shift
+console.log(language.shift()); // Delete a first element and return it
 
-    },
-    {},
-    123
-)
+// Unshift
+console.log(language.unshift('Dart', 'C')); // add one or more element in array head and return new length of array
+console.log(language);
 
-// Check type of array
-console.log(Array.isArray(language));
+// Splicing
+language.splice(1, 1);
+//language.splice(1, 0); no delete
+language.splice(1, 0, 'Ruby');
+console.log(language);
 
-// Length of array
-console.log(language.length);
+// Concat
+var language2 = [
+    'Swift',
+    'Java'
+];
+console.log(language.concat(language2));
 
-console.log(language[2]);
-
-
+// Slicing
+console.log(language.slice(1, 4));
+console.log(language2.slice(-2, -1));
+//console.log(language2.slice(0)); copy array
