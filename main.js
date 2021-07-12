@@ -1,22 +1,26 @@
-// Object prototype - Basic
+// Date in Javascript - Basic
 
-function User(firstName, lastName, avaatar) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.avaatr = avaatar;
-    this.getName = function () {
-        return `${this.firstName} ${this.lastName}`;
-    }
-}
+var date = new Date(); // return object
 
-User.prototype.className = 'TH1715';
-User.prototype.getClassName = function () {
-    return this.className;
-}
+//var date = Date(); // return string
+console.log(date);
 
-var author = new User('Wang', 'Hua', 'Avatar');
-var user = new User('Linh', 'Hua', 'Avatar');
+// Get hour
+console.log(date.getHours());
 
-console.log(author.className);
-console.log(user.getClassName());
+// Get minutes
+console.log(date.getMinutes());
 
+// Get seconds
+console.log(date.getSeconds());
+
+// Get date
+console.log(date.getDate());
+
+// Get month
+console.log(date.getMonth() + 1);
+
+// Get year
+console.log(date.getFullYear());
+
+console.log(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`);
