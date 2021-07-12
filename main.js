@@ -1,47 +1,20 @@
-// Switch in Javascript
+// Ternary Operator
 
-var date = 9;
-
-switch (date) {
-    case 2:
-        console.log("monday");
-        break;
-    case 3:
-        console.log("tuesday");
-        break;
-    case 4:
-        console.log("wednesday");
-        break;
-    case 5:
-        console.log("thursday");
-        break;
-    case 6:
-        console.log("friday");
-        break;
-    case 7:
-        console.log("saturday");
-        break;
-    case 8:
-        console.log("sunday");
-        break;
-    default:
-        console.log("I don't know");
+var course = {
+    name: 'Javascript',
+    coin: 0
 }
 
-// switch (date) {
-//     case 2:
-//     case 3:
-//     case 4:
-//     case 5:
-//         console.log("monday, tuesday, wednesday, thursday");
-//         break;
-//     case 6:
-//         console.log("friday");
-//         break;
-//     case 7:
-//         console.log("saturday");
-//         break;
-//     case 8:
-//         console.log("sunday");
-//         break;
+// if(course.coin > 0){
+//     console.log(`${course.coin} coin`);
+// } else {
+//     console.log('Free');
 // }
+
+var result = course.coin > 0 ? `${course.coin} coin` : 'Free';
+console.log(result);
+
+var a = 1, b = 2;
+
+var c = a > 0 ? a : b;
+console.log(c);
