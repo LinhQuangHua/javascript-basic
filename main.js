@@ -1,47 +1,39 @@
-// Javascript array methods
+// Function in Javascript
 
 // Create
-var language = [
-    'PHP',
-    'Python',
-    'C#',
-    'JavaScript'
-];
+function showDialog() {
+    alert("Hello World!");
+}
+//showDialog();
 
-// To string
-console.log(language.toString()); // returns array to strings
+// Function with a parameter
+function writeLog(message) {
+    console.log(message);
+}
+writeLog('Test message');
+writeLog(123);
+writeLog(['Python', 'JavaScript']);
 
-// Join
-console.log(language.join(' ')); // same toString() with separator char
+function writeLog_02(log, message) {
+    if (message) {
+        console.log(message);
+    }
 
-// Pop
-console.log(language.pop()); // Delete a final element and return it
+    if (log) {
+        console.log(log);
+    }
 
-// Push
-console.log(language.push('C++')); // return new length of array
-console.log(language);
+    //console.log(arguments); ==> Out put array with all parameters in this function
+}
+writeLog_02("Log 01", "Log 02");
 
-// Shift
-console.log(language.shift()); // Delete a first element and return it
-
-// Unshift
-console.log(language.unshift('Dart', 'C')); // add one or more element in array head and return new length of array
-console.log(language);
-
-// Splicing
-language.splice(1, 1);
-//language.splice(1, 0); no delete
-language.splice(1, 0, 'Ruby');
-console.log(language);
-
-// Concat
-var language2 = [
-    'Swift',
-    'Java'
-];
-console.log(language.concat(language2));
-
-// Slicing
-console.log(language.slice(1, 4));
-console.log(language2.slice(-2, -1));
-//console.log(language2.slice(0)); copy array
+// For loop
+function writeLog_03() {
+    var myString = '';
+    for (var param of arguments) {
+        //console.log(param);
+        myString += `${param} - `
+    }
+    console.log(myString);
+}
+writeLog_03("Log 01", "Log 02", "Log 03");
