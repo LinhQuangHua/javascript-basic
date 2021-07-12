@@ -1,20 +1,23 @@
-// Return in function
+// Types of function
 
-// var isConfirm = confirm('Are you sure?');
-
-// console.log(isConfirm); 
-
-function Add(a, b) {
-    return a + b;
+showMessage();
+// Declaration function
+function showMessage() {
+    console.log("Declaration function");
 }
 
-var result = Add(2, 8);
+// Expression function
 
-console.log(result);
-
-function returnArray(a, b) {
-    return [a, b];
+var showMessage_02 = function () {
+    console.log("Expression function");
 }
-
-var resultArray = returnArray(5, 7);
-console.log(resultArray);
+// Expression function - Callback
+setTimeout(function () {
+    console.log("Expression function - Callback");
+});
+// Expression function in object
+var myObject = {
+    myFunction: function () {
+        console.log("Expression function in object");
+    }
+}
