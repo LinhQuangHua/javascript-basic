@@ -1,30 +1,22 @@
-// Object in Javascript
+// Object constructor
 
-// Create
-var room = 'classroom';
-var myInfo = {
-    name: 'Linh Wang', // key in bject is property
-    age: 20,
-    address: 'HCMC',
-    [room]: 'TH1715',
-    getName: function () {
-        return this.name;
+function User(firstName, lastName, avaatar) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.avaatr = avaatar;
+    this.getName = function () {
+        return `${this.firstName} ${this.lastName}`;
     }
 }
 
-console.log(myInfo);
-console.log(myInfo.getName()); // function in object is method
+var author = new User('Wang', 'Hua', 'Avatar');
+var user = new User('Linh', 'Hua', 'Avatar');
 
-// Add key 'email' in Object
-myInfo.email = 'pikachu@gmail.com';
-//myInfo['email'] = 'pikachu@gmail.com'; // another way
+author.title = 'Learning Javascript online';
+user.comment = 'I like it'
 
-console.log(myInfo);
+console.log(author);
+console.log(user);
 
-// Get key 
-console.log(myInfo.name);
-//console.log(myInfo['name']);
-
-// Delete key
-delete myInfo.age;
-console.log(myInfo);
+console.log(author.getName());
+console.log(user.getName());
