@@ -1,4 +1,4 @@
-// Object constructor
+// Object prototype - Basic
 
 function User(firstName, lastName, avaatar) {
     this.firstName = firstName;
@@ -9,14 +9,14 @@ function User(firstName, lastName, avaatar) {
     }
 }
 
+User.prototype.className = 'TH1715';
+User.prototype.getClassName = function () {
+    return this.className;
+}
+
 var author = new User('Wang', 'Hua', 'Avatar');
 var user = new User('Linh', 'Hua', 'Avatar');
 
-author.title = 'Learning Javascript online';
-user.comment = 'I like it'
+console.log(author.className);
+console.log(user.getClassName());
 
-console.log(author);
-console.log(user);
-
-console.log(author.getName());
-console.log(user.getName());
