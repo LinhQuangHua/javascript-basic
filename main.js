@@ -1,26 +1,47 @@
-// Date in Javascript - Basic
+// Switch in Javascript
 
-var date = new Date(); // return object
+var date = 9;
 
-//var date = Date(); // return string
-console.log(date);
+switch (date) {
+    case 2:
+        console.log("monday");
+        break;
+    case 3:
+        console.log("tuesday");
+        break;
+    case 4:
+        console.log("wednesday");
+        break;
+    case 5:
+        console.log("thursday");
+        break;
+    case 6:
+        console.log("friday");
+        break;
+    case 7:
+        console.log("saturday");
+        break;
+    case 8:
+        console.log("sunday");
+        break;
+    default:
+        console.log("I don't know");
+}
 
-// Get hour
-console.log(date.getHours());
-
-// Get minutes
-console.log(date.getMinutes());
-
-// Get seconds
-console.log(date.getSeconds());
-
-// Get date
-console.log(date.getDate());
-
-// Get month
-console.log(date.getMonth() + 1);
-
-// Get year
-console.log(date.getFullYear());
-
-console.log(`${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`);
+// switch (date) {
+//     case 2:
+//     case 3:
+//     case 4:
+//     case 5:
+//         console.log("monday, tuesday, wednesday, thursday");
+//         break;
+//     case 6:
+//         console.log("friday");
+//         break;
+//     case 7:
+//         console.log("saturday");
+//         break;
+//     case 8:
+//         console.log("sunday");
+//         break;
+// }
