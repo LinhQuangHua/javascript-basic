@@ -1,25 +1,25 @@
-// Do/while loop
+// Nested loop
 
-var a = 0;
+var myArray = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+];
 
-do {
+for (var i = 0; i < myArray.length; i++) {
+    for (var j = 0; j < myArray[i].length; j++) {
+        console.log(myArray[i][j]);
+    };
+};
 
-    a++;
-    console.log(a);
+var language = [
+    ['PHP', 'Python'],
+    ['Java', 'JS'],
+    ['C#', 'C++']
+];
 
-} while (a < 10);
-
-
-var i = 0;
-var isSuccess = false;
-
-do {
-    i++;
-
-    console.log(i);
-
-    if (true) {
-        isSuccess = true;
-    }
-
-} while (!isSuccess && i <= 3);
+for (var i = 0; i < language.length; i++) {
+    for (var j = 0; j < language[i].length; j++) {
+        console.log(language[i][j]);
+    };
+};
