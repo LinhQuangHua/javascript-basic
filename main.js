@@ -1,15 +1,23 @@
-// For loop
+// For/in loop
 
-for (var i = 1; i <= 10; i++) {
-    console.log(i);
+var myInfo = {
+    name: 'Wang Hua',
+    age: 18,
+    address: 'HCMC'
+};
+
+for (var key in myInfo) {
+    console.log(myInfo[key]);
 }
 
-var myArray = [
-    'PHP',
-    'JS',
-    'Python'
-];
+var language = ['PHP', 'Java', 'Python'];
 
-for (var i = 0; i < myArray.length; i++) {
-    console.log(myArray[i]);
+for (var key in language) {
+    console.log(language[key]);
+}
+
+var myString = 'Javascript';
+
+for (var key in myString) {
+    console.log(myString[key]);
 }
