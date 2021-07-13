@@ -1,21 +1,25 @@
-// While loop
-
-var i = 0;
-
-while (i <= 10) {
-    i++;
-    console.log(i);
-}
+// Do/while loop
 
 var a = 0;
 
-var myArray = [
-    'Javascript',
-    'Python',
-    'Java'
-];
+do {
 
-while (a < myArray.length) {
-    console.log(myArray[a]);
     a++;
-}
+    console.log(a);
+
+} while (a < 10);
+
+
+var i = 0;
+var isSuccess = false;
+
+do {
+    i++;
+
+    console.log(i);
+
+    if (true) {
+        isSuccess = true;
+    }
+
+} while (!isSuccess && i <= 3);
