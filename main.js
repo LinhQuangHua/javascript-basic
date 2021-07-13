@@ -1,4 +1,22 @@
-// For/in loop
+// For/of loop
+
+var language = [
+    'PHP',
+    'Java',
+    'Python'
+];
+
+for (var value of language) {
+    console.log(value);
+}
+
+var myString = 'Javascript';
+
+for (var value of myString) {
+    console.log(value);
+}
+
+// Use for/of loop object
 
 var myInfo = {
     name: 'Wang Hua',
@@ -6,18 +24,8 @@ var myInfo = {
     address: 'HCMC'
 };
 
-for (var key in myInfo) {
-    console.log(myInfo[key]);
-}
+console.log(Object.values(myInfo));
 
-var language = ['PHP', 'Java', 'Python'];
-
-for (var key in language) {
-    console.log(language[key]);
-}
-
-var myString = 'Javascript';
-
-for (var key in myString) {
-    console.log(myString[key]);
+for (var value of Object.keys(myInfo)) {
+    console.log(value);
 }
