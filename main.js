@@ -1,20 +1,15 @@
-// Ternary Operator
+// For loop
 
-var course = {
-    name: 'Javascript',
-    coin: 0
+for (var i = 1; i <= 10; i++) {
+    console.log(i);
 }
 
-// if(course.coin > 0){
-//     console.log(`${course.coin} coin`);
-// } else {
-//     console.log('Free');
-// }
+var myArray = [
+    'PHP',
+    'JS',
+    'Python'
+];
 
-var result = course.coin > 0 ? `${course.coin} coin` : 'Free';
-console.log(result);
-
-var a = 1, b = 2;
-
-var c = a > 0 ? a : b;
-console.log(c);
+for (var i = 0; i < myArray.length; i++) {
+    console.log(myArray[i]);
+}
