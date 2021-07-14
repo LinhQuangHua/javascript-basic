@@ -1,4 +1,4 @@
-// // Array reduce() method
+// // Array reduce() method - Part02
 
 var courses = [
     {
@@ -34,32 +34,70 @@ var courses = [
 ];
 
 // Total coin all courses
-var total = 0;
-courses.forEach(element => {
-    return total += element.coin;
-});
-console.log(total);
-
-// use reduce()
-function coinHandler(accumulator, currentValue) {
-    return accumulator + currentValue.coin;
-}
-var totalCoin = courses.reduce(coinHandler, 0); // 0 is initial value
+var totalCoin = courses.reduce(function (total, courses) { return total + courses.coin }, 0);
 
 console.log(totalCoin);
 
-/*--------------------------------------*/
+var number = [100, 400, 500, 200];
 
-// var totalCoin = courses.reduce(function (accumulator, currentValue) {
-//     return accumulator + currentValue.coin;
-// }, 0); 
+var total = number.reduce(function (total, number) { return total + number });
 
-/*--------------------------------------*/
+console.log(total);
 
-// var totalCoin = courses.reduce((a,b) => a+b.coin ,0); 
+// Flat
+var depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
 
+var flatArray = depthArray.reduce(function (flatOutput, depthItem) {
+    return flatOutput.concat(depthItem);
+}, []);
 
+console.log(flatArray);
 
+var topics = [
+    {
+        topic: 'front-end',
+        courses: [
+            {
+                id: 1,
+                title: 'HTML, CSS'
+            },
+            {
+                id: 2,
+                title: 'Javascript'
+            }
+        ]
+    },
+    {
+        topic: 'backend-end',
+        courses: [
+            {
+                id: 1,
+                title: 'PHP'
+            },
+            {
+                id: 2,
+                title: 'NodeJS'
+            }
+        ]
+    }
+];
+
+var newArray = topics.reduce(function (course, topic) {
+    return course.concat(topic.courses)
+}, []);
+
+console.log(newArray);
+
+var html = newArray.map(function (course) {
+    return `
+        <div>
+            <h2>${course.title}</h2>
+            <p>${course.id}</p>
+        </div>
+    `;
+});
+
+console.log(html.join(''));
 
 
 
