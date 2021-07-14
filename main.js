@@ -1,4 +1,4 @@
-// Array map() method
+// // Array reduce() method
 
 var courses = [
     {
@@ -33,18 +33,34 @@ var courses = [
     }
 ];
 
-function coursesHandler(courses, index) {
-    return {
-        id: courses.id,
-        name: courses.name,
-        coin: courses.coin,
-        coinText: `Gia: ${courses.coin}`,
-        index: index,
-        originArray: courses
-    }
-};
+// Total coin all courses
+var total = 0;
+courses.forEach(element => {
+    return total += element.coin;
+});
+console.log(total);
 
-var newCourses = courses.map(coursesHandler);
+// use reduce()
+function coinHandler(accumulator, currentValue) {
+    return accumulator + currentValue.coin;
+}
+var totalCoin = courses.reduce(coinHandler, 0); // 0 is initial value
 
-console.log(newCourses);
+console.log(totalCoin);
+
+/*--------------------------------------*/
+
+// var totalCoin = courses.reduce(function (accumulator, currentValue) {
+//     return accumulator + currentValue.coin;
+// }, 0); 
+
+/*--------------------------------------*/
+
+// var totalCoin = courses.reduce((a,b) => a+b.coin ,0); 
+
+
+
+
+
+
 
