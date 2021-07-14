@@ -1,4 +1,4 @@
-// Javascript array methods - Part 02
+// Array map() method
 
 var courses = [
     {
@@ -33,39 +33,18 @@ var courses = [
     }
 ];
 
-// for (const i in courses) {
-//     console.log(courses[i]);
-// }
+function coursesHandler(courses, index) {
+    return {
+        id: courses.id,
+        name: courses.name,
+        coin: courses.coin,
+        coinText: `Gia: ${courses.coin}`,
+        index: index,
+        originArray: courses
+    }
+};
 
-// forEach
-courses.forEach(function (courses, index) {
-    console.log(index, courses);
-});
+var newCourses = courses.map(coursesHandler);
 
-// every
-var isFree = courses.every(function (courses, index) {
-    console.log(index);
-    return courses.coin === 0;
-});
-console.log(isFree);
+console.log(newCourses);
 
-// some
-var isFree = courses.some(function (courses, index) {
-    console.log(index);
-    return courses.coin === 0;
-});
-console.log(isFree);
-
-// find
-var nameCourse = courses.find(function (courses, index) {
-    console.log(index);
-    return courses.name === 'Python'; // return first courses have name 'Python'
-});
-console.log(nameCourse);
-
-// filter
-var nameCourse = courses.filter(function (courses, index) {
-    console.log(index);
-    return courses.name === 'Python'; // return all courses have name 'Python'
-});
-console.log(nameCourse);
