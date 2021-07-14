@@ -1,41 +1,41 @@
-// Math object
+// Callback in Javascript
 
-// Math.PI 
-console.log(Math.PI);
+function myFunction(params) {
+    if (typeof params === 'function') {
+        params('Learning Javascript!');
+    }
+};
 
-// Math.round()
-console.log(Math.round(1.3)); // return 1
-console.log(Math.round(1.5)); // return 2
+function Callback(value) {
+    console.log('Value: ' + value);
+}
 
-// Math.abs()
-console.log(Math.abs(-4)); //  |-4| = 4
+myFunction(Callback);
 
-// Math.ceil()
-console.log(Math.ceil(1.9));
-console.log(Math.ceil(1.00023));
+/*---------------------------------------------*/
 
-// Math.floor()
-console.log(Math.floor(1.9));
-console.log(Math.floor(1.00023));
-
-// Math.min()
-console.log(Math.min(-10, 50, 20, 10, 5, 7));
-
-// Math.max()
-console.log(Math.max(-10, 50, 20, 10, 5, 7));
-
-
-// Math.random()
-console.log(Math.random()); // Return number < 1
-console.log(Math.floor(Math.random() * 10))
-
-var random = Math.floor(Math.random() * 5);
-var bonus = [
-    '10 coin',
-    '20 coin',
-    '30 coin',
-    '40 coin',
-    '50 coin'
+var courses = [
+    'C#',
+    'PHP',
+    'Javascript'
 ];
 
-console.log(bonus[random]);
+Array.prototype.map2 = function (callback) {
+    var output = [];
+    var arraysLength = this.length;
+    for (var i = 0; i < arraysLength; i++) {
+        var result = callback(this[i], i);
+        output.push(result);
+    }
+    return output;
+}
+
+var html = courses.map2(function (courses) {
+    return `<h2>${courses}</h2>`;
+});
+
+// var html = courses.map(function (courses) {
+//     return `<h2>${courses}</h2>`;
+// });
+
+console.log(html.join(''));
