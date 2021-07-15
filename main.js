@@ -1,35 +1,37 @@
-// Build filter menthod
+// Build some menthod
 
 var course = [
     {
         name: 'Ruby',
-        coin: 100
+        coin: 700,
+        isFinish: false
     },
     {
         name: 'Python',
-        coin: 300
+        coin: 650,
+        isFinish: false
     },
     {
         name: 'C#',
-        coin: 200
+        coin: 500,
+        isFinish: true
     }
 ];
 
-Array.prototype.filter2 = function (callback) {
-    output = [];
+Array.prototype.some2 = function (callback) {
     for (var index in this) {
         if (this.hasOwnProperty(index)) {
             var result = callback(this[index], index, this);
             if (result) {
-                output.push(this[index]);
+                return true;
             }
         }
     }
-    return output;
+    return false;
 };
 
-var filterCourses = course.filter2(function (course) {
-    return course.coin > 100;
+var filterCourses = course.some2(function (course) {
+    return course.isFinish;
 });
 console.log(filterCourses);
 
