@@ -1,41 +1,22 @@
-// Callback in Javascript
+// Build forEach menthod
 
-function myFunction(params) {
-    if (typeof params === 'function') {
-        params('Learning Javascript!');
+// var course = [
+//     'PHP',
+//     'JavaScript',
+//     'Python'
+// ];
+
+var course = new Array(100);
+course.push('PHP', 'JavaScript');
+
+Array.prototype.forEach2 = function (callback) {
+    for (var index in this) {
+        if (this.hasOwnProperty(index)) {
+            callback(this[index], index, this);
+        }
     }
 };
 
-function Callback(value) {
-    console.log('Value: ' + value);
-}
-
-myFunction(Callback);
-
-/*---------------------------------------------*/
-
-var courses = [
-    'C#',
-    'PHP',
-    'Javascript'
-];
-
-Array.prototype.map2 = function (callback) {
-    var output = [];
-    var arraysLength = this.length;
-    for (var i = 0; i < arraysLength; i++) {
-        var result = callback(this[i], i);
-        output.push(result);
-    }
-    return output;
-}
-
-var html = courses.map2(function (courses) {
-    return `<h2>${courses}</h2>`;
-});
-
-// var html = courses.map(function (courses) {
-//     return `<h2>${courses}</h2>`;
-// });
-
-console.log(html.join(''));
+course.forEach2(function (course, index, array) {
+    console.log(course, index, array);
+})
