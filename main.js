@@ -1,38 +1,22 @@
-// HTML DOM
+// DOM Attribute
 
-/**
- * 1. Elements: Get by ID, class, tag, CSS selector, HTML collection
- * 2. Attribute:
- * 3. Text: 
- */
+var headings = document.querySelector('h1');
 
-var getById = document.getElementById('heading');
-console.log(getById);
+console.log(headings);
 
-var getClassName = document.getElementsByClassName('heading');
-console.log(getClassName);
+headings.title = 'Heading'
+headings.id = 'Heading'
+headings.className = 'Heading'
 
-var getTagName = document.getElementsByTagName('h1');
-console.log(getTagName);
+// headings.setAttribute('class', 'Heading')
+// headings.setAttribute('title', 'Heading')
+// headings.setAttribute('id', 'Heading')
 
-var getCssSelector = document.querySelector('.heading');
-console.log(getCssSelector);
+console.log(headings.getAttribute('class'));
 
-var getHeading01 = document.querySelector('.box .heading-2:first-child');
-console.log(getHeading01);
+var aTag = document.querySelector('a');
 
-var getHeading02 = document.querySelector('.box .heading-2:nth-child(2)');
-console.log(getHeading02);
-
-var getAllHeading = document.querySelectorAll('.box .heading-2');
-console.log(getAllHeading);
-console.log(getAllHeading[0]);
-
-var htmlCollection = document.forms.form01;
-// var htmlCollection = document.forms['form01'];
-console.log(htmlCollection);
-
-console.log(document.anchors);
+aTag.href = '#'
 
 
 
