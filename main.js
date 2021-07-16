@@ -1,18 +1,16 @@
-// InnerText vs textContent
+// InnerHTML vs OuterHTML
 
-var headingElement = document.querySelector('.heading');
+var boxElement = document.querySelector('.box')
 
-//geter
-console.log(headingElement.innerText);
-// console.log(headingElement.textContent);
+console.log(boxElement);
 
-//seter
-headingElement.innerText = 'New heading';
-// headingElement.textContent = 'New heading';
+boxElement.innerHTML = '<h1>New Heading</h1>'
+// boxElement.innerHTML = '<h1 title="heading">New Heading</h1>'
 
-// different innerText and textContent
-var heading02Element = document.querySelector('.heading-2');
-console.log(heading02Element.innerText);
-console.log(heading02Element.textContent);
+console.log(boxElement.querySelector('h1').innerText);
 
+var box02Element = document.querySelector('.box-2')
 
+console.log(box02Element.outerHTML);
+
+box02Element.outerHTML = '<span>Test</span>';
