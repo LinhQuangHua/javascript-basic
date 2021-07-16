@@ -1,18 +1,26 @@
-// DOM style
+// ClassList Property
+
+/**
+ * add
+ * contains
+ * remove
+ * toggle
+ */
 
 var boxElement = document.querySelector('.box');
 
-// boxElement.style.width = '100px';
-// boxElement.style.height = '200px';
-// boxElement.style.backgroundColor = 'red';
+console.log(boxElement.classList);
 
-Object.assign(boxElement.style, {
-    width: '100px',
-    height: '200px',
-    backgroundColor: 'green',
-});
+boxElement.classList.add('red', 'blue');
 
-console.log(boxElement.style.backgroundColor);
+console.log(boxElement.classList.contains('red'));
 
+// boxElement.classList.remove('red');
 
+setTimeout(() => {
+    boxElement.classList.remove('red');
+}, 3000)
 
+setInterval(() => {
+    boxElement.classList.toggle('blue');
+}, 1000)
