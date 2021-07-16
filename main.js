@@ -1,16 +1,18 @@
-// InnerHTML vs OuterHTML
+// DOM style
 
-var boxElement = document.querySelector('.box')
+var boxElement = document.querySelector('.box');
 
-console.log(boxElement);
+// boxElement.style.width = '100px';
+// boxElement.style.height = '200px';
+// boxElement.style.backgroundColor = 'red';
 
-boxElement.innerHTML = '<h1>New Heading</h1>'
-// boxElement.innerHTML = '<h1 title="heading">New Heading</h1>'
+Object.assign(boxElement.style, {
+    width: '100px',
+    height: '200px',
+    backgroundColor: 'green',
+});
 
-console.log(boxElement.querySelector('h1').innerText);
+console.log(boxElement.style.backgroundColor);
 
-var box02Element = document.querySelector('.box-2')
 
-console.log(box02Element.outerHTML);
 
-box02Element.outerHTML = '<span>Test</span>';
