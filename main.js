@@ -1,22 +1,18 @@
-// DOM Attribute
+// InnerText vs textContent
 
-var headings = document.querySelector('h1');
+var headingElement = document.querySelector('.heading');
 
-console.log(headings);
+//geter
+console.log(headingElement.innerText);
+// console.log(headingElement.textContent);
 
-headings.title = 'Heading'
-headings.id = 'Heading'
-headings.className = 'Heading'
+//seter
+headingElement.innerText = 'New heading';
+// headingElement.textContent = 'New heading';
 
-// headings.setAttribute('class', 'Heading')
-// headings.setAttribute('title', 'Heading')
-// headings.setAttribute('id', 'Heading')
-
-console.log(headings.getAttribute('class'));
-
-var aTag = document.querySelector('a');
-
-aTag.href = '#'
-
+// different innerText and textContent
+var heading02Element = document.querySelector('.heading-2');
+console.log(heading02Element.innerText);
+console.log(heading02Element.textContent);
 
 
