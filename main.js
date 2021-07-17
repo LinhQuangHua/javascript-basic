@@ -1,36 +1,22 @@
-// Event listener
+// JSON(JavaScript Object Notation)
 
-//var btnElement = document.querySelector('button');
+// Stringify: JavaScript type to JSON
+// Parse: JSON to JavaScript type
 
-// DOM event
-// btnElement.onclick = function () {
+var a = '1'; // number in JSON
+console.log(typeof JSON.parse(a));
 
-//     console.log('Task 01');
+var b = 'true'; // boolean in JSON
+console.log(typeof JSON.parse(b));
 
-//     console.log('Task 02');
+var c = '"Hello"'; // string in JSON
+console.log(typeof JSON.parse(c));
 
-//     alert('Task 03');
-// };
+var json = '{"name":"Wang Hua", "age":18}';
+var object = JSON.parse(json);
+console.log(typeof object);
 
-// setTimeout(function () {
-//     // btnElement.onclick();
-//     btnElement.onclick = function () { }
-// }, 3000)
-
-// Event listener
-var btnElement = document.querySelector('button');
-
-function Task01() {
-    console.log('Task 01');
-}
-
-function Task02() {
-    console.log('Task 02');
-}
-
-btnElement.addEventListener('click', Task01);
-btnElement.addEventListener('click', Task02);
-
-setTimeout(function () {
-    btnElement.removeEventListener('click', Task02);
-}, 3000);
+console.log(JSON.stringify({
+    name: 'Wang',
+    age: 18,
+}));
