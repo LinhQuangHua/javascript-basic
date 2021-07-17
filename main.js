@@ -1,26 +1,19 @@
-// ClassList Property
+// DOM events
 
 /**
- * add
- * contains
- * remove
- * toggle
+ * Attribute events
+ * Assign event using the element node
  */
 
-var boxElement = document.querySelector('.box');
+// var h1Element = document.querySelector('h1');
+// h1Element.onclick = function () {
+//     console.log(Math.random);
+// }
 
-console.log(boxElement.classList);
+var h1Element = document.querySelectorAll('h1');
 
-boxElement.classList.add('red', 'blue');
-
-console.log(boxElement.classList.contains('red'));
-
-// boxElement.classList.remove('red');
-
-setTimeout(() => {
-    boxElement.classList.remove('red');
-}, 3000)
-
-setInterval(() => {
-    boxElement.classList.toggle('blue');
-}, 1000)
+for (var i = 0; i < h1Element.length; i++) {
+    h1Element[i].onclick = function (e) {
+        console.log(e.target);
+    }
+}
