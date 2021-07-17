@@ -6,17 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=sc, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        ul {
+            display: none;
+        }
+
+        input:focus~ul {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
-    <input type="text">
-    <input type="checkbox">
+    <a href="https://f8.edu.vn/">Learning JavaScript</a>
 
-    <select>
-        <option value="value 1">Javascript</option>
-        <option value="value 2">Pythons</option>
-        <option value="value 3">C#</option>
-    </select>
+    <br />
+
+    <a href="https://www.google.com.vn/">Google</a>
+
+    <br />
+
+    <input type="text" placeholder='Search...'>
+    <ul>
+        <li>javascript</li>
+        <li>PHP</li>
+        <li>Python</li>
+    </ul>
+
+    <br />
+
+    <div>
+        Div
+        <button>Click me!</button>
+    </div>
 
     <script type="text/javascript" src="main.js"></script>
 </body>

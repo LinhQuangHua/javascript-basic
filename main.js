@@ -1,45 +1,37 @@
-// DOM events
+// DOM events - Part03
 
 /**
- * Input/ select
- * Key up/ down
+ * PreventDefault
+ * StopPropagation
  */
 
-var inputElement = document.querySelector('input[type="text"]');
+var aElement = document.links;
 
-// inputElement.onchange = function (e) {
-//     console.log(e.target.value);
-// }
-
-inputElement.oninput = function (e) {
-    console.log(e.target.value);
+for (var i = 0; i < aElement.length; i++) {
+    aElement[i].onclick = function (e) {
+        // console.log(e.target.href);
+        if (!e.target.href.startsWith('https://f8.edu.vn/')) {
+            e.preventDefault();
+        }
+    };
 }
 
-// inputElement.onkeyup = function (e) {
-//     console.log(e.target.value);
-// }
+var ulElement = document.querySelector('ul');
 
-// inputElement.onkeydown = function (e) {
-//     console.log(e.target.value);
-// }
-
-var checkboxElement = document.querySelector('input[type="checkbox"]');
-checkboxElement.onchange = function (e) {
-    console.log(e.target.checked);
+ulElement.onmousedown = function (e) {
+    e.preventDefault();
+}
+ulElement.onclick = function (e) {
+    console.log(e.target);
 }
 
-var selectElement = document.querySelector('select');
-selectElement.onchange = function (e) {
-    console.log(e.target.value);
+document.querySelector('div').onclick = function () {
+    console.log('DIV');
 }
 
-document.onkeydown = function (e) {
-    switch (e.which) {
-        case 27:
-            console.log("EXIT"); // 27 is ESC btn
-            break;
-        case 13:
-            console.log("ENTER"); // 12 is Enter btn
-            break;
-    }
+document.querySelector('button').onclick = function (e) {
+    e.stopPropagation();
+    console.log('Click me!');
 }
+
+
