@@ -1,37 +1,36 @@
-// DOM events - Part03
+// Event listener
 
-/**
- * PreventDefault
- * StopPropagation
- */
+//var btnElement = document.querySelector('button');
 
-var aElement = document.links;
+// DOM event
+// btnElement.onclick = function () {
 
-for (var i = 0; i < aElement.length; i++) {
-    aElement[i].onclick = function (e) {
-        // console.log(e.target.href);
-        if (!e.target.href.startsWith('https://f8.edu.vn/')) {
-            e.preventDefault();
-        }
-    };
+//     console.log('Task 01');
+
+//     console.log('Task 02');
+
+//     alert('Task 03');
+// };
+
+// setTimeout(function () {
+//     // btnElement.onclick();
+//     btnElement.onclick = function () { }
+// }, 3000)
+
+// Event listener
+var btnElement = document.querySelector('button');
+
+function Task01() {
+    console.log('Task 01');
 }
 
-var ulElement = document.querySelector('ul');
-
-ulElement.onmousedown = function (e) {
-    e.preventDefault();
-}
-ulElement.onclick = function (e) {
-    console.log(e.target);
+function Task02() {
+    console.log('Task 02');
 }
 
-document.querySelector('div').onclick = function () {
-    console.log('DIV');
-}
+btnElement.addEventListener('click', Task01);
+btnElement.addEventListener('click', Task02);
 
-document.querySelector('button').onclick = function (e) {
-    e.stopPropagation();
-    console.log('Click me!');
-}
-
-
+setTimeout(function () {
+    btnElement.removeEventListener('click', Task02);
+}, 3000);
