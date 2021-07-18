@@ -1,22 +1,81 @@
-// Promise(chain)
+// Promise example
 
-function sleep(ms) {
+var users = [
+    {
+        id: 1,
+        name: 'Songoku'
+    },
+    {
+        id: 2,
+        name: 'Naruto'
+    },
+    {
+        id: 3,
+        name: 'Conan'
+    },
+];
+
+var comments = [
+    {
+        id: 1,
+        user_id: 1,
+        content: 'I like it.'
+    },
+    {
+        id: 2,
+        user_id: 3,
+        content: 'Yeah.'
+    },
+];
+
+function getUserByIds(userId) {
     return new Promise(function (resolve) {
-        setTimeout(resolve, ms);
+        var result = users.filter(function (user) {
+            return userId.includes(user.id)
+        });
+        setTimeout(function () {
+            resolve(result);
+        }, 1000);
     })
 }
 
-sleep(1000)
-    .then(function () {
-        console.log(1);
-        return sleep(1000)
+
+function getComments() {
+    return new Promise(function (resolve) {
+        setTimeout(function () {
+            resolve(comments);
+        })
     })
-    .then(function () {
-        console.log(2);
-        return sleep(1000)
+}
+
+getComments()
+    .then((comments) => {
+        var userId = comments.map((comment) => {
+            return comment.user_id
+        })
+        return getUserByIds(userId)
+            .then((users) => {
+                return {
+                    users: users,
+                    comments: comments
+                }
+            })
     })
-    .then(function () {
-        console.log(3)
+    .then((data) => {
+        console.log(data);
+        var commentsBlock = document.getElementById('comment-block');
+        var html = '';
+        data.comments.forEach((comments) => {
+            var user = data.users.find((user) => {
+                return user.id === comments.user_id
+            });
+            html += `<li>${user.name}: ${comments.content}</li>`;
+        });
+        commentsBlock.innerHTML = html;
     })
 
+getUserByIds([1, 2])
+    .then((user) => {
+        console.log(user);
+    })
 
