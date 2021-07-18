@@ -1,28 +1,22 @@
-// Promise(sync, async)
+// Promise(chain)
 
-// Async: setTimeout, setInterval, fetch, XMLHttpRequest, request animation frame
-
-var promise = new Promise(
-    //Executor
-    function (resolve, reject) {
-        resolve(
-            {
-                id: '1',
-                name: 'Javascript'
-            }
-        );
-        // reject('Not found!');
-    }
-);
-
-promise
-    .then(function (courses) {
-        console.log(courses);
+function sleep(ms) {
+    return new Promise(function (resolve) {
+        setTimeout(resolve, ms);
     })
-    .catch(function (error) {
-        console.log(error);
+}
+
+sleep(1000)
+    .then(function () {
+        console.log(1);
+        return sleep(1000)
     })
-    .finally(function () {
-        console.log('Done!');
-    });
+    .then(function () {
+        console.log(2);
+        return sleep(1000)
+    })
+    .then(function () {
+        console.log(3)
+    })
+
 
